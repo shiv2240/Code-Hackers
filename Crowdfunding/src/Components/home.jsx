@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react"
+import { Button} from "@chakra-ui/react"
 import Navbar from "./navbar"
 import "../styles/home.css"
 import content1img1 from "../images/content1img1.png"
@@ -6,9 +6,10 @@ import content1img2 from "../images/content1img2.png"
 import content1img3 from "../images/content1img3.png"
 import content1 from "../images/content2.png"
 import content3 from "../images/content3.png"
-import { Box , Text } from "@chakra-ui/react"
+import Footer from "./footer"
 const Home = ()=>{
     return(
+        <>
         <div>
             <Navbar/>
             <div className="slider">
@@ -21,7 +22,7 @@ const Home = ()=>{
                 </div>
             </div>
             <div className="content-1">
-                <h1>Reason of Helping</h1>
+                <h1 className="content-1-h1">Reason of Helping</h1>
                 <div className="content-1-part">
                     <div>
                         <img src={content1img1}/>
@@ -50,12 +51,13 @@ const Home = ()=>{
                 </div>
                 
             </div>
+
             <div className="content-2">
                 <div className="left-content2">
                     <img src={content1} alt="img"/>
                 </div>
                 <div className="right-content2">
-                    <h1>Watch Our Latest<br/> Activities</h1>
+                    <h1 className="content-1-h2">Watch Our Latest Activities</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do<br/> eiusmod tempor incididunt ut labore dolore magna aliqua. enim<br/> minim veniam, quis nostrud exercitation.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do<br/> eiusmod tempor incididunt ut labore dolore magna aliqua. enim<br/> minim veniam, quis nostrud exercitation. tempor incididunt ut<br/> labore dolore magna aliqua. enim minim veniam, quis nostrud<br/> exercitation.</p>
                     <Button p="23px">Donate Now</Button>
@@ -65,6 +67,8 @@ const Home = ()=>{
                 <img src={content3} alt="img" />
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 export default Home
