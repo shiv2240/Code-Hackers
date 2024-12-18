@@ -1,0 +1,300 @@
+.slider {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    position: relative; 
+}
+
+.slider-content {
+    color: white;
+    width: 55%;
+    padding: 20px;
+    margin-left: 90px;
+    padding-top: 50px;
+    text-align: left; 
+}
+
+.slider-content > h3 {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.slider-content > h1 {
+    font-size: 90px;
+    font-family: "Yeseva One", cursive;
+    font-weight: 1000;
+}
+
+.slider-content > p {
+    font-size: 17px;
+}
+
+.slider-content > button {
+    padding: 23px 27px;
+    margin-top: 20px;
+}
+.content-1{
+    padding: 30px;
+    font-weight: 500;
+    margin: auto;
+}
+.content-1>h1{
+    text-align: center;
+    font-size: 50px;
+}
+.content-1-part{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+}
+.content-1-part>div>img{
+    transition: transform .2s;
+}
+.content-1-part>div>img:hover{
+    transform: scale(0.9);
+}
+
+.img1-content{
+    width: 60%;
+    border: 2px solid whitesmoke;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 40px;
+    position: relative;
+    top: -140px;
+    left: 90px;
+}
+.img1-content>h1{
+    font-size: 26px;
+    margin-bottom: 10px;
+
+}
+.img1-content>p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.content-2{
+    display: flex;
+    width: 100%;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+}
+.left-content2{
+    width: 40%;
+}
+.right-content2{
+    width: 50%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 80px;
+}
+.right-content2>h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.right-content2>p{
+    font-size: 17px;
+}
+.right-content2>Button{
+    width: 20%;
+    margin-top: 20px;
+    color: white;
+    background-color: #3CC78F;
+}
+.right-content2>Button:hover{
+    color: #3CC78F;
+    background-color: white;
+    border: 1px solid #3CC78F;
+}
+.content-3{
+    width: 100%;
+    padding: 90px 0;
+    text-align: center;
+}
+.content-3>img{
+    margin: auto;
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1200px) {
+    .slider-content {
+        width: 70%; 
+        margin-left: 20px; 
+    }
+
+    .slider-content > h1 {
+        font-size: 70px; 
+    }
+    .img1-content {
+        width: 70%;
+        left: 0;
+        top: 0; 
+    }
+
+    .content-1 > h1 {
+        font-size: 40px;
+    }
+    .left-content2 {
+        width: 45%; 
+    }
+
+    .right-content2 {
+        width: 45%; 
+        margin-left: 40px; 
+    }
+
+    .right-content2 > h1 {
+        font-size: 40px;
+    }
+    .content-3>img {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 992px) {
+    .slider-content {
+        width: 80%; 
+        margin-left: 10px; 
+        padding-top: 30px; 
+    }
+
+    .slider-content > h1 {
+        font-size: 50px; 
+    }
+
+    .slider-content > h3 {
+        font-size: 20px;
+    }
+
+    .slider-content > p {
+        font-size: 15px; 
+    }
+
+    .slider-content > button {
+        padding: 15px 20px; 
+    }
+    .img1-content {
+        width: 80%; 
+        padding: 15px 30px; 
+    }
+
+    .content-1 > h1 {
+        font-size: 35px;
+    }
+
+    .img1-content > h1 {
+        font-size: 24px; 
+    }
+
+    .img1-content > p {
+        font-size: 15px; 
+    }
+    .left-content2 {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .right-content2 {
+        width: 100%; 
+        margin-left: 0; 
+    }
+
+    .right-content2 > h1 {
+        font-size: 35px; 
+    }
+
+    .right-content2 > p {
+        font-size: 16px; 
+    }
+
+    .right-content2 > button {
+        width: 50%; 
+    }
+    .content-3 > img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 400px;
+        background-attachment: scroll;
+    }
+
+    .slider-content {
+        width: 90%; 
+        margin-left: 0; 
+        padding: 10px; 
+        text-align: center;
+    }
+
+    .slider-content > h1 {
+        font-size: 40px; 
+    }
+
+    .slider-content > h3 {
+        font-size: 18px;
+    }
+
+    .slider-content > p {
+        font-size: 14px; 
+    }
+
+    .slider-content > button {
+        padding: 10px 15px; 
+    }
+    .content-1-part{
+        flex-wrap: wrap;
+    }
+    .img1-content {
+        width: 90%;
+        padding: 10px 20px; 
+        top: -130px;
+        left: 70px; 
+    }
+
+    .content-1 > h1 {
+        font-size: 30px;
+    }
+
+    .img1-content > h1 {
+        font-size: 22px;
+    }
+
+    .img1-content > p {
+        font-size: 14px; 
+    }
+    .right-content2 > h1 {
+        font-size: 30px; 
+        font-weight: 700;
+    }
+
+    .right-content2 > p {
+        font-size: 15px;
+    }
+
+    .right-content2 > button {
+        width: 50%;
+        margin: auto;
+    }
+    .content-3 {
+        padding: 60px 0; 
+    }
+
+    .content-3 > img {
+        width: 100%; 
+    }
+}
