@@ -151,8 +151,27 @@
     height: auto;
 }
 
-/* Underline effect for headings */
-.content-1-h1, .content-1-h2, .content-1-h3 {
+.content-1-h1 {
+    text-decoration: none;
+    position: relative;
+    margin:1rem 0;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 32rem;
+      bottom: 0;
+      width: 0; 
+      height: 2px; 
+      background-color: rgb(60, 199, 142); 
+      transition: width 0.3s ease-in-out; 
+    }
+  
+    &:hover::after {
+      width: 27rem;
+    }
+  }
+
+  .content-1-h2 {
     text-decoration: none;
     position: relative;
     margin: 1rem 0;
@@ -364,6 +383,7 @@
 
     .content-1-part {
         flex-wrap: wrap;
+
     }
 
     .img1-content {
