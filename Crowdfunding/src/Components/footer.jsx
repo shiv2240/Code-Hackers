@@ -1,19 +1,7 @@
-import { useEffect } from "react";
 import "../styles/footer.css";
 import imglogo from "../images/old-Logo/COPY_a_a_b_h_a_r__2_-removebg-preview.png";
 
 const Footer = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://kit.fontawesome.com/5422a0d9bf.js";
-    script.crossOrigin = "anonymous";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <footer className="footerContainer">
       <div className="logoSection">

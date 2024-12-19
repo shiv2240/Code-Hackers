@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 3rem;
+  padding: 0.7rem 3rem;
   z-index: 999;
   transition: top 0.3s;
   border-bottom-left-radius: 10rem;
@@ -41,6 +41,7 @@ body {
 .navlogo {
   height: 4rem;
   cursor: pointer;
+  filter: brightness(0.5);
 }
 
 .nav-links {
@@ -101,3 +102,4 @@ body {
     display: block;
   }
 }
+
