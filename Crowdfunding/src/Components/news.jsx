@@ -33,7 +33,7 @@ const News = () => {
                 supporting the UN Relief and Works Agency for Palestine Refugees
                 (UNRWA). These resolutions, passed with 158-9 and 159-9 votes
                 respectively, call for the release of all hostages and criticize
-                Israel's ban on UNRWA's activities. Israel and the US opposed
+                Israel&apos;s ban on UNRWA&apos;s activities. Israel and the US opposed
                 the resolutions.
                 India, along with several other UN members, have approved
                 General Assembly resolutions, demanding an immediate ceasefire
@@ -64,7 +64,7 @@ const News = () => {
             className="newsCardText"
             style={{ fontWeight: "bold", fontSize: "20px" }}
           >
-            Atishi claims Centre settling Rohingyas in Delhi; 'false narrative’,
+            Atishi claims Centre settling Rohingyas in Delhi; &apos;false narrative’,
             says Hardeep Puri
           </span>
           <div>
@@ -72,18 +72,18 @@ const News = () => {
               <p style={{ fontWeight: "600" }}>Synopsis</p>
               <p className="newsCardSyn" style={{ fontWeight: "100" }}>
                 Delhi CM Atishi accuses the BIP-led Centre of settling illegal
-                Rohingyas in the city, citing Union Minister Hardeep Puri's 2022
+                Rohingyas in the city, citing Union Minister Hardeep Puri&apos;s 2022
                 tweets. Puri denies the claims, alleging AAP is. playing host to
                 them. Atishi demands a list of Rohingyas settled in Delhi and
-                questions the BIP's border control.
+                questions the BIP&apos;s border control.
                 New Delhi: Delhi Chief Minister Atishi wrote to Union Home
                 Minister Amit Shah on Sunday, accusing the BIP-led Centre of
-                settling "a large number of illegal Rohingyas" in different
+                settling &quot;a large number of illegal Rohingyas&quot; in different
                 parts of the city. With the AAP targeting Union Minister Hardeep
                 Singh Puri over his tweets and claiming that settling these
-                refugees here was a "conscious decision" of the BJP-led NDA
-                government, the minister accused AAP of indulging in "politics
-                of diversion, false narratives and half-truths". In the run-up
+                refugees here was a &quot;conscious decision&quot; of the BJP-led NDA
+                government, the minister accused AAP of indulging in &quot;politics
+                of diversion, false narratives and half-truths&quot;. In the run-up
                 to the Delhi Assembly polls due in February 2025,
               </p>
             </div>
