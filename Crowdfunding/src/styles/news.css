@@ -214,7 +214,7 @@
   }
 
   .newsHead:hover::after {
-    width: 10rem;
+    width: 22.5rem;
   }
 
   .newsCardTitle {

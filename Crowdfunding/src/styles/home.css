@@ -177,7 +177,7 @@
     margin: 1rem 0;
 }
 
-.content-1-h1::after, .content-1-h2::after, .content-1-h3::after {
+.content-1-h1::after, .content-1-h2::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -187,42 +187,49 @@
     transition: width 0.3s ease-in-out;
 }
 
-.content-1-h1:hover::after, .content-1-h2:hover::after, .content-1-h3:hover::after {
+.content-1-h1:hover::after, .content-1-h2:hover::after{
     width: 100%;
 }
 
 /* Desktop and larger screens */
 @media (min-width: 1200px) {
-    .content-1-h1::after, .content-1-h2::after, .content-1-h3::after {
+    .content-1-h1::after {
         left: 32rem;
         width: 0;
     }
+    .content-1-h2::after{
+        left: 0rem;
+        width: 0;
+    }
 
-    .content-1-h1:hover::after, .content-1-h2:hover::after, .content-1-h3:hover::after {
+    .content-1-h1:hover::after {
         width: 27rem;
+    }
+    .content-1-h2:hover::after{
+        width: 38.5rem;
     }
 }
 
 /* Tablet/Small Desktop: Between 992px and 1200px */
 @media (max-width: 1200px) and (min-width: 992px) {
-    .content-1-h1::after, .content-1-h2::after, .content-1-h3::after {
+    .content-1-h1::after, .content-1-h2::after{
         left: 15rem;
         width: 0;
     }
 
-    .content-1-h1:hover::after, .content-1-h2:hover::after, .content-1-h3:hover::after {
+    .content-1-h1:hover::after, .content-1-h2:hover::after{
         width: 20rem;
     }
 }
 
 /* Tablet: Between 768px and 992px */
 @media (max-width: 992px) and (min-width: 768px) {
-    .content-1-h1::after, .content-1-h2::after, .content-1-h3::after {
+    .content-1-h1::after, .content-1-h2::after{
         left: 5rem;
         width: 0;
     }
 
-    .content-1-h1:hover::after, .content-1-h2:hover::after, .content-1-h3:hover::after {
+    .content-1-h1:hover::after, .content-1-h2:hover::after{
         width: 15rem;
     }
 }
