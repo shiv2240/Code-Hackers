@@ -7,7 +7,6 @@ import content1img3 from "../images/content1img3.png"
 import content1 from "../images/content2.png"
 import content3 from "../images/content3.png"
 import Footer from "./footer"
-// import News from "./news
 const Home = ()=>{
     return(
         <>
@@ -68,7 +67,6 @@ const Home = ()=>{
                 <img src={content3} alt="img" />
             </div>
         </div>
-        {/* <News/> */}
         <Footer/>
         </>
     )

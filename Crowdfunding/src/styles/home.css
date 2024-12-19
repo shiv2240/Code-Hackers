@@ -133,7 +133,6 @@
     text-decoration: none;
     position: relative;
     margin:1rem 0;
-  
     &::after {
       content: "";
       position: absolute;
