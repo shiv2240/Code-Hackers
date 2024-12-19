@@ -1,7 +1,8 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -25,7 +26,6 @@ body {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-
 
 .navbar {
   display: flex;
@@ -80,7 +80,19 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+
+  .navbar-wrapper {
+    padding: 0 3rem;
+  }
+
+  .navlogo {
+    height: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
+
   .nav-links {
     display: flex;
     flex-direction: column;
@@ -95,11 +107,43 @@ body {
   }
 
   .nav-links.open {
-    max-height: 300px;
+    max-height: 455px;
   }
+
+  .nav-links a {
+    margin: 15px 0;
+    padding: 10px 0;
+  }
+
 
   .menu-icon {
     display: block;
+  }
+
+  .make-a-donate {
+    padding: 8px 15px;
+    font-size: 14px;
+    width: 80%; 
+    margin: 15px 0;
+  }
+}
+
+/* Adjust for even smaller screens (like portrait mobile phones) */
+@media (max-width: 480px) {
+  .nav-wrapper {
+    padding: 0 1rem;
+  }
+
+  .navlogo {
+    height: 2.5rem; 
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links a {
+    font-size: 14px;
   }
 }
 
