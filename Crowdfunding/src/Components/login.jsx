@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { auth } from '../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
@@ -30,7 +30,7 @@ function Login() {
       });
       navigate("/home");
     } catch (err) {
-      setError("User  not signed in. Please check your credentials.");
+      setError("User  not signed in. Please check your credentials.",err);
     }
   };
 

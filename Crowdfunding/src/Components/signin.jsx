@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { auth } from '../config/firebase';
 import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'; 
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,8 @@ function SignIn() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -25,10 +27,10 @@ function SignIn() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await sendEmailVerification(userCredential.user);
       alert('Verification email sent!');
-      useNavigate("/login")
+      navigate("/login")
 
     } catch (err) {
-      setError("email is already in use");
+      setError("email is already in use",err);
     }
   };
 
