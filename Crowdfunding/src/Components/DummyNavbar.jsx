@@ -1,20 +1,24 @@
-import { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom'; 
-import '../styles/navbar.css';
-import imglogo from "../images/Updated-Logo/CROP_Updated_Logo_W-removebg-preview.png";
 import { useDisclosure } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import { Modal, ModalOverlay, Button, Text, ModalContent,  ModalHeader, ModalFooter, ModalBody, ModalCloseButton, } from '@chakra-ui/react'
+import { Modal, ModalOverlay, Button, Text, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton } from '@chakra-ui/react';
+import '../styles/navbar.css';
+import imglogo from "../images/Updated-Logo/CROP_Updated_Logo_W-removebg-preview.png";
 
-const DummyNavbar = () => {
+const DummyNavbar = React.memo(() => {
   const [isOpened, setIsOpen] = useState(false);
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsOpen((prevState) => !prevState);
+  }, []);
+
+  const handleLoginClick = useCallback(() => {
+    navigate('/login');
+  }, [navigate]);
 
   return (
     <div className="navbar-wrapper">
@@ -22,39 +26,44 @@ const DummyNavbar = () => {
         <Link to="/" className="logo-link">
           <img src={imglogo} className="navlogo" alt="Logo" />
         </Link>
-        
+
         <div className={`nav-links ${isOpened ? 'open' : ''}`}>
-          <Link to="/">Home</Link>
-          <Link to="/">About</Link>
-          <Link to="/">Blog</Link>
-          <Link to="/">Pages</Link>
-          <Link to="/">Contact</Link>
-          <Button onClick={onOpen} className="make-a-donate">Make a Donate</Button>
+          <div className="donateButtonSpace">
+            <Button onClick={onOpen} className="make-a-donate">Explore our features</Button>
+            <Button onClick={onOpen} className="make-a-donate">Make a Donation</Button>
+          </div>
+          
           <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-                <ModalContent>
-                    <ModalHeader>Sorry!<img src={imglogo} alt="logo"/></ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <Text fontSize="17px">To donate 💵 You need to login first.</Text>
-                    </ModalBody>
+            <ModalContent>
+              <ModalHeader>
+                Sorry! <img src={imglogo} alt="logo" />
+              </ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <Text fontSize="17px">To donate 💵, you need to login first.</Text>
+              </ModalBody>
 
-                    <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
-                            Close
-                        </Button>
-                        <Button onClick={()=>navigate('/login')} colorScheme='teal'>Login</Button>
-                    </ModalFooter>
-                </ModalContent>
-            </Modal>
+              <ModalFooter>
+                <Button colorScheme="blue" mr={3} onClick={onClose}>
+                  Close
+                </Button>
+                <Button onClick={handleLoginClick} colorScheme="teal">
+                  Login
+                </Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
         </div>
 
         <div className="menu-icon" onClick={toggleMenu}>
-          {isOpen ? '✖' : '☰'}
+          {isOpened ? '✖' : '☰'}
         </div>
       </nav>
     </div>
   );
-};
+});
+
+DummyNavbar.displayName = 'DummyNavbar';
 
 export default DummyNavbar;

@@ -1,7 +1,7 @@
 import "../styles/news.css";
-import img1 from "../images/news-img/freepik__upload__25461.jpeg";
-import img2 from "../images/news-img/freepik__upload__86243.jpeg";
-import img3 from "../images/news-img/COPY-News-3.jpg";
+import img1 from "../images/news-img/freepik__upload__25461.webp";
+import img2 from "../images/news-img/freepik__upload__86243.webp";
+import img3 from "../images/news-img/COPY-News-3.webp";
 
 const News = () => {
   return (
