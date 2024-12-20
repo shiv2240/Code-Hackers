@@ -15,11 +15,17 @@ body {
   z-index: 1;
   width: 100%;
   backdrop-filter: blur(10px);
-  background-color: rgba(60, 199, 143, 0.8);
+  background-color: transparent;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-bottom-right-radius: 3rem;
   border-bottom-left-radius: 3rem;
   transition: backdrop-filter 0.3s, background-color 0.3s, border-radius 0.3s;
+}
+.navbar-wrapper.scrolled {
+  background-color: rgba(60, 199, 143, 0.8);
+  backdrop-filter: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .navbar-wrapper:hover {
@@ -41,7 +47,6 @@ body {
 .navlogo {
   height: 4rem;
   cursor: pointer;
-  filter: brightness(0.5);
 }
 
 .nav-links {
@@ -81,7 +86,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-
   .navbar-wrapper {
     padding: 0 3rem;
   }
@@ -92,7 +96,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   .nav-links {
     display: flex;
     flex-direction: column;
@@ -115,7 +118,6 @@ body {
     padding: 10px 0;
   }
 
-
   .menu-icon {
     display: block;
   }
@@ -123,7 +125,7 @@ body {
   .make-a-donate {
     padding: 8px 15px;
     font-size: 14px;
-    width: 80%; 
+    width: 80%;
     margin: 15px 0;
   }
 }
@@ -135,7 +137,7 @@ body {
   }
 
   .navlogo {
-    height: 2.5rem; 
+    height: 2.5rem;
   }
 
   .navbar {
@@ -146,4 +148,3 @@ body {
     font-size: 14px;
   }
 }
-

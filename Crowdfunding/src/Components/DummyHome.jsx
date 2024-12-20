@@ -122,8 +122,9 @@ const DummyHome = () => {
         </section>
       </div>
       <MemoizedNews />
-      <MemoizedFooter />
       <VolunteerPage/>
+      <MemoizedFooter />
+      
     </>
   );
 };
