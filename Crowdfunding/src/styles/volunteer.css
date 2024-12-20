@@ -8,21 +8,14 @@
   .title {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
     transition: color 0.3s ease;
     position: relative; 
     display: inline-block; 
-    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 20px;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid rgb(97, 209, 163);
     color: #333;
     padding-bottom: 10px; 
-    box-shadow: 0px 10px 4px  teal;
-  }
-  
-  .title:hover {
-    color: #0077b5; 
+    cursor: pointer;
   }
   
   .team-container {
@@ -49,7 +42,7 @@
   .team-member:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background-color: #3CC78FCC; 
+    background-color: rgba(97, 209, 162, 0.673); 
   }
   
   .team-member::before {
@@ -79,8 +72,11 @@
   }
   
   .team-member:hover .member-image {
-    transform: rotate(10deg); 
-  }
+    transform: scale(1.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
   
   .member-name {
     font-size: 1.5rem;
