@@ -4,6 +4,8 @@ import { useDisclosure } from '@chakra-ui/react';
 import DummyNavbar from "./DummyNavbar";
 import Footer from "./footer";
 import News from "./news";
+import '../styles/home.css'
+import VolunteerPage from "./volunteer"
 import React from 'react';
 import imglogo from "../images/Updated-Logo/CROP_Updated_Logo_W-removebg-preview.png";
 import content1img1 from "../images/content1img1.webp";
@@ -119,9 +121,9 @@ const DummyHome = () => {
           <img src={content3} alt="img" />
         </section>
       </div>
-
       <MemoizedNews />
       <MemoizedFooter />
+      <VolunteerPage/>
     </>
   );
 };
