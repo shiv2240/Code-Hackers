@@ -7,7 +7,7 @@ import About from './Components/about'
 import Blog from './Components/blog'
 import Pages from './Components/pages'
 import Contact from './Components/contact'
-import Login from './Components/LogIn'
+import Login from './Components/login'
 import SignIn from './Components/signin'
 import DummyHome from './Components/DummyHome'
 

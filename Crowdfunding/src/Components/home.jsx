@@ -1,12 +1,13 @@
 import { Button } from "@chakra-ui/react";
 import Navbar from "./navbar";
 import "../styles/home.css";
-import content1img1 from "../images/content1img1.png";
-import content1img2 from "../images/content1img2.png";
-import content1img3 from "../images/content1img3.png";
-import content1 from "../images/content2.png";
-import content3 from "../images/content3.png";
+import content1img1 from "../images/content1img1.webp";
+import content1img2 from "../images/content1img2.webp";
+import content1img3 from "../images/content1img3.webp";
+import content1 from "../images/content2.webp";
+import content3 from "../images/content3.webp";
 import Footer from "./footer";
+import VolunteerPage from "./volunteer";
 import News from "./news";
 const Home = () => {
   return (
@@ -90,8 +91,10 @@ const Home = () => {
         </div>
       </div>
       <News />
+  <VolunteerPage/>
       <Footer />
     </>
   );
 };
 export default Home;
+

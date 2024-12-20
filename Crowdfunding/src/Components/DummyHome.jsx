@@ -1,5 +1,4 @@
 import { Button } from "@chakra-ui/react";
-// import { useState } from "react"
 import DummyNavbar from "./DummyNavbar";
 import "../styles/home.css";
 import content1img1 from "../images/content1img1.png";
@@ -9,28 +8,8 @@ import content1 from "../images/content2.png";
 import content3 from "../images/content3.png";
 import Footer from "./footer";
 import News from "./news";
-// import YouTube from "react-youtube"
+import VolunteerPage from "./volunteer"
 const DummyHome = () => {
-  // const [isVideoVisible, setVideoVisible] = useState(false);
-  // const videoId = "Oflbho9ZG2U";
-  // const [player, setPlayer] = useState(null);
-
-  // const handleVideoClick = () => {
-  //     setVideoVisible(true);
-  // };
-
-  // const onReady = (event) => {
-  //     setPlayer(event.target);
-  //     event.target.playVideo();
-  // };
-
-  // const options = {
-  //     height: '390',
-  //     width: '640',
-  //     playerVars: {
-  //         autoplay: 1,
-  //     },
-  // };
   return (
     <>
       <div>
@@ -87,17 +66,6 @@ const DummyHome = () => {
         <div className="content-2">
           <div className="left-content2">
             <img src={content1} alt="img" />
-            {/* <div onClick={handleVideoClick} className="play-icon" ><i className="fa-solid fa-circle-play" style={{color:"teal"}}></i></div>
-                    {isVideoVisible && (
-                        <div className="video-Container">
-                            <YouTube
-                                videoId={videoId} 
-                                opts={options} 
-                                onReady={onReady} 
-                            />
-                        </div>
-                        
-                    )} */}
           </div>
           <div className="right-content2">
             <h1 className="content-1-h2">Watch Our Latest Activities</h1>
@@ -126,6 +94,7 @@ const DummyHome = () => {
         </div>
       </div>
       <News />
+      <VolunteerPage/>
       <Footer />
     </>
   );
