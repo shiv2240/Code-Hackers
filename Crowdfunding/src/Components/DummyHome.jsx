@@ -1,5 +1,6 @@
 import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { useDisclosure } from '@chakra-ui/react';
 import DummyNavbar from "./DummyNavbar";
 import Footer from "./footer";
@@ -13,6 +14,8 @@ import content1img2 from "../images/content1img2.webp";
 import content1img3 from "../images/content1img3.webp";
 import content1 from "../images/content2.webp";
 import content3 from "../images/content3.webp";
+import ReactModal from "react-modal"
+ReactModal.setAppElement('#root');
 
 const MemoizedDummyNavbar = React.memo(DummyNavbar);
 const MemoizedFooter = React.memo(Footer);
@@ -21,6 +24,16 @@ const MemoizedNews = React.memo(News);
 const DummyHome = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
+  const [isVideo, setIsVideo] = useState(false);
+
+  const openModal = () => {
+    setIsVideo(true);
+  };
+
+  const closeModal = () => {
+    setIsVideo(false);
+  };
+
 
   const handleLoginRedirect = () => {
     navigate('/login');
@@ -76,6 +89,24 @@ const DummyHome = () => {
         <section className="content-2">
           <div className="left-content2">
             <img src={content1} alt="img" />
+            <button onClick={openModal} className="play-button">
+                <i className="fa-solid fa-play"></i>
+            </button>
+            <ReactModal
+                isOpen={isVideo}
+                onRequestClose={closeModal}
+                contentLabel="Video Modal"
+                className="modal"
+                overlayClassName="overlay"
+            >
+                <button onClick={closeModal} className="close-modal-button"> ❌ </button>
+                <iframe width="760" 
+                height="515" 
+                src="https://www.youtube.com/embed/Bh-DSY3OTgM?si=pX5ltAdBpoDg6tUp?autoplay=1" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </ReactModal>
           </div>
           <div className="right-content2">
             <h1 className="content-1-h2">Watch Our Latest Activities</h1>
