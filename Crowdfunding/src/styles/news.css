@@ -321,7 +321,6 @@
   }
 }
 
-/* Responsive styles */
 @media (max-width: 1200px) {
   .NewsReadbutton {
     padding: 10px 200px;
