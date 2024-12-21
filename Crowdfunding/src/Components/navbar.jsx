@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <nav className="navbar">
-        <Link to="/" className="logo-link">
+        <Link to="/home" className="logo-link">
           <img src={imglogo} className="navlogo" alt="Logo" />
         </Link>
 
