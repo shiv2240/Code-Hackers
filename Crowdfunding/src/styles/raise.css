@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.raise-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  background-image: url("../images/banner.webp");
+}
+
+.plus-button {
+  font-size: 3rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(50%);
+  color: rgba(255, 255, 255, 0.864);
+  border: none;
+  cursor: pointer;
+}
+.raise-request {
+z-index: 1;
+display: block;
+position: absolute;
+top: 53%;
+left: 50%;
+transform: translate(-50%,0);
+color: white;
+font-size: 2rem;
+text-align: center;
+line-height: 1.5;
+}
+
+.details-form {
+  display: flex;
+  color:black;
+  flex-direction: column;
+  gap: 1rem;
+  width: 400px;
+  border: 1px solid rgba(214, 214, 214, 0.334);
+  background-color: rgba(255, 255, 255, 0.215);
+  border-radius: 2%;
+  padding:25px;
+  backdrop-filter: blur(10px);
+}
+
+.details-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
+  padding: 10px;
+  font-size: 1rem;
+  color:black;
+  border:1px solid grey;
+  border-radius: 4px;
+}
+input{
+  resize: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border:1px solid grey;
+}
+.drop-zone {
+  border: 2px dashed #aaa;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  color:grey;
+  border-radius: 4px;
+}
+
+.drop-zone:hover {
+  background-color: #f0f0f0;
+}
+
+.submitbutton {
+  padding: 5px 10px;
+  background-color: rgba(60, 199, 143);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+
+}
+
+.submitbutton:hover {
+  background-color: rgb(60, 199, 143, 0.8);
+}

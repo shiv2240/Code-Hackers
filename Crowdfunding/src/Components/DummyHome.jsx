@@ -7,7 +7,7 @@ import News from "./news";
 import '../styles/home.css'
 import VolunteerPage from "./volunteer"
 import React from 'react';
-import imglogo from "../images/Updated-Logo/CROP_Updated_Logo_W-removebg-preview.png";
+import imglogo1 from "../images/Updated-Logo/CROP_Updated_Logo_W-removebg-preview.png";
 import content1img1 from "../images/content1img1.webp";
 import content1img2 from "../images/content1img2.webp";
 import content1img3 from "../images/content1img3.webp";
@@ -49,7 +49,7 @@ const DummyHome = () => {
             <div>
               <img src={content1img1} alt="Collecting Fund" />
               <div className="img1-content">
-                <h1>Collecting Fund</h1>
+                <h1>Funds</h1>
                 <p>Be part of the journey as we bring hope and change to lives in need.</p>
                 <p>Read More...</p>
               </div>
@@ -98,7 +98,7 @@ const DummyHome = () => {
               <ModalOverlay />
               <ModalContent>
                 <ModalHeader>
-                  Sorry! <img src={imglogo} alt="Logo" />
+                  Sorry! <img src={imglogo1} alt="Logo" />
                 </ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>

@@ -1,9 +1,9 @@
-import Navbar from "./navbar"
+import Navbar_page from "../Components/navbar_page"
 
 const Blog = ()=>{
     return(
         <div>
-            <Navbar/>
+            <Navbar_page/>
             welcome to blog page
         </div>
     )

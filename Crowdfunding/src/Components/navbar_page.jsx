@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/navbar.css";
+import "../styles/navbar_page.css";
 import imglogo from "../images/Updated-Logo/COPY_Updated_Logo_B-removebg-preview.png";
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,32 +9,23 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar-wrapper");
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
 
   return (
-    <div className="navbar-wrapper">
+    <div className="navbar-container">
       <nav className="navbar">
-        <Link to="/" className="logo-link">
-          <img src={imglogo} className="navlogo" alt="Logo" />
+        <Link to="/" className="navbar-logo-link">
+          <img src={imglogo} className="navbar-logo" alt="Logo" />
         </Link>
 
-        <div className={`nav-links ${isOpen ? "open" : ""}`}>
+        <div className={`navbar-links ${isOpen ? "navbar-links-open" : ""}`}>
           <Link to="/home">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/raise">Raise</Link>
           <Link to="/contact">Contact</Link>
-          <button className="make-a-donate">Make a Donate</button>
         </div>
 
-        <div className="menu-icon" onClick={toggleMenu}>
+        <div className="navbar-menu-icon" onClick={toggleMenu}>
           {isOpen ? "✖" : "☰"}
         </div>
       </nav>

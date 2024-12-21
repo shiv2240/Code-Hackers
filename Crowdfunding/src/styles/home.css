@@ -63,7 +63,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: 4rem;
     margin: 1rem 2rem;
 }
 
@@ -76,14 +76,14 @@
 }
 
 .img1-content {
-    width: 60%;
+    width: 55%;
     border: 2px solid rgb(235, 235, 235);
     background-color: white;
     border-radius: 10px;
     padding: 20px 40px;
     position: relative;
     top: -140px;
-    left: 90px;
+    left: 70px;
 }
 
 .img1-content > h1 {
@@ -436,5 +436,10 @@
 
     .content-3 > img {
         width: 100%;
+    }
+}
+@media (max-width: 380px){
+    .slider-content{
+        margin-top:2.8rem;
     }
 }

@@ -1,9 +1,9 @@
-import Navbar from "./navbar"
+import Navbar_page from "../Components/navbar_page"
 
 const Contact = ()=>{
     return(
         <div>
-            <Navbar/>
+            <Navbar_page/>
             welcome to Contact page
         </div>
     )

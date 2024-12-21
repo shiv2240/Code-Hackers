@@ -5,16 +5,13 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import About from './Components/about'
 import Blog from './Components/blog'
-import Pages from './Components/pages'
+import Raise from './Components/raise'
 import Contact from './Components/contact'
 import Login from './Components/login'
 import SignIn from './Components/signin'
 import DummyHome from './Components/DummyHome'
 
-
-
 function App() {
-
 
   return (
    <>
@@ -25,11 +22,10 @@ function App() {
         <Route path='/home' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/blog' element={<Blog/>}/>
-        <Route path='/pages' element={<Pages/>}/>
+        <Route path='/raise' element={<Raise/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
-        
       </Routes>
     </Router>
    </AuthProvider> 

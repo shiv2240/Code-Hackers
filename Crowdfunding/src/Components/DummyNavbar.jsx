@@ -14,7 +14,7 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 import "../styles/navbar.css";
-import imglogo from "../images/Updated-Logo/COPY_Updated_Logo_B-removebg-preview.png";
+import imglogo from "../images/Updated-Logo/CROP_Updated_Logo_W-removebg-preview.png";
 
 const DummyNavbar = React.memo(() => {
   const [isOpened, setIsOpen] = useState(false);
