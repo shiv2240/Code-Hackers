@@ -105,6 +105,59 @@
 
 .left-content2 {
     width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+.play-button {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #3CC78FCC; 
+    color: #000;
+    padding: 30px 37px; 
+    border-radius: 50%; 
+    font-size: 29px; 
+    text-decoration: none; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background-color: teal; 
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 14px;
+    padding: 20px;
+    max-width: 56%; 
+    margin: 100px auto;
+    position: relative; 
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.close-modal-button {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background: none;
+    border: none; 
+    font-size: 24px; 
+    cursor: pointer; 
+    color: #000; 
 }
 
 .right-content2 {
@@ -365,7 +418,7 @@
 
 @media (max-width: 768px) {
     .slider {
-        height: 400px;
+        height: 600px;
         background-attachment: scroll;
     }
 
