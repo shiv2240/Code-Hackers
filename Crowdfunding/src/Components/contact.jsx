@@ -1,4 +1,4 @@
-import Navbar from "./navbar";
+import Navbar from "./navbar_page";
 import { useState } from "react";
 import { db } from "../config/firebase";
 import { ref, set } from 'firebase/database';
@@ -89,7 +89,6 @@ const Contact = () => {
                 send us query for anytime
             </p>
         </div>
-       
         </div>
          <Footer/>
         </>

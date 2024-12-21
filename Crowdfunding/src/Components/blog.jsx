@@ -1,4 +1,4 @@
-import Navbar from "./navbar"
+import Navbar from "../Components/navbar_page"
 import "../styles/blogs.css"
 import blogImg1 from "../images/blogs/blog-1.jpg"
 import blogImg2 from "../images/blogs/blog-2.jpg"

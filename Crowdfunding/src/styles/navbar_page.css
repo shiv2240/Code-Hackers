@@ -8,30 +8,13 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.navbar-wrapper {
-  padding: 0 5rem;
+.navbar-container {
   position: fixed;
   top: 0;
-  z-index: 1;
   width: 100%;
-  background-color: transparent;
-  border-bottom-right-radius: 3rem;
-  border-bottom-left-radius: 3rem;
+  z-index: 1000;
+  background-color: rgba(60, 199, 143, 0.8);
   transition: backdrop-filter 0.3s, background-color 0.3s, border-radius 0.3s;
-}
-.navbar-wrapper.scrolled {
-  background-color: rgba(60, 199, 143, 0.8);
-  backdrop-filter: none;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.navbar-wrapper:hover {
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  background-color: rgba(60, 199, 143, 0.8);
-  backdrop-filter: none;
 }
 
 .navbar {
@@ -45,99 +28,78 @@ body {
   border-bottom-right-radius: 10rem;
 }
 
-.navlogo {
+.navbar-logo {
   height: 4rem;
   cursor: pointer;
 }
 
-.nav-links {
+.navbar-links {
   display: flex;
   align-items: center;
   transition: max-height 0.3s ease;
 }
 
-.nav-links a {
+.navbar-links a {
   color: white;
   text-decoration: none;
   margin: 0 15px;
   position: relative;
 }
 
-.nav-links a:hover {
+.navbar-links a:hover {
   color: black;
 }
 
-.make-a-donate {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.make-a-donate:hover {
-  background-color: lightcyan;
-}
-
-.menu-icon {
+.navbar-menu-icon {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
 
 @media (max-width: 1024px) {
-  .navbar-wrapper {
+  .navbar-container {
     padding: 0 3rem;
   }
 
-  .navlogo {
+  .navbar-logo {
     height: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .navbar-links {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: teal;
+    background-color: rgba(60, 199, 143, 0.8);
     width: 100%;
     max-height: 0;
     overflow: hidden;
     z-index: 999;
   }
 
-  .nav-links.open {
+  .navbar-links-open {
     max-height: 455px;
   }
 
-  .nav-links a {
+  .navbar-links a {
     margin: 15px 0;
     padding: 10px 0;
   }
 
-  .menu-icon {
+  .navbar-menu-icon {
     display: block;
-  }
-
-  .make-a-donate {
-    padding: 8px 15px;
-    font-size: 14px;
-    width: 80%;
-    margin: 15px 0;
   }
 }
 
-/* Adjust for even smaller screens (like portrait mobile phones) */
 @media (max-width: 480px) {
-  .nav-wrapper {
+  .navbar-container {
     padding: 0 1rem;
   }
 
-  .navlogo {
+  .navbar-logo {
     height: 2.5rem;
   }
 
@@ -145,23 +107,24 @@ body {
     padding: 0.5rem 1rem;
   }
 
-  .nav-links a {
+  .navbar-links a {
     font-size: 14px;
   }
 }
+
 @media (max-width: 380px) {
-  .nav-wrapper {
+  .navbar-container {
     padding: 0.8rem;
   }
   .navbar {
     padding: 0.5rem 1rem;
   }
-  .navlogo {
+  .navbar-logo {
     height: 3.5rem;
     margin-left: -4.5rem;
     position: relative;
   }
-  .nav-links a {
+  .navbar-links a {
     font-size: 14px;
   }
 }
