@@ -5,10 +5,23 @@ import "../styles/raise.css";
 import Navbar_Page from "../Components/navbar_page.jsx";
 import Footer from "../Components/footer";
 import RaiseContainer from "./raiseContainer.jsx";
+import {
+  Modal,
+  ModalOverlay,
+  Button,
+  Text,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/react";
 
 const Raise = () => {
   const [showForm, setShowForm] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+   const { isOpen, onOpen, onClose } = useDisclosure();
   const [formData, setFormData] = useState({
     reason: "",
     amount: "",
@@ -47,7 +60,7 @@ const Raise = () => {
         createdAt: new Date().toISOString(),
       });
 
-      alert(`Data submitted successfully! Key: ${newRaiseRef.key}`);
+      onOpen();
     } catch (error) {
       alert(`Error adding data: ${error.message}`);
     }
@@ -165,8 +178,25 @@ const Raise = () => {
       </div>
       <RaiseContainer/>
       <Footer />
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Successful</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text fontSize="19px" textColor="green">Your data was submitted successfully!</Text>
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme="blue" onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 };
+
+
 
 export default Raise;
