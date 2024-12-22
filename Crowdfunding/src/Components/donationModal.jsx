@@ -23,7 +23,7 @@ const DonationModal = ({ isOpen, onClose, onDonate }) => {
             setAmount('');
             toast({
                 title: "Thank you for your donation!",
-                description: `You donated $${donationAmount}.`,
+                description: `You donated ₹${donationAmount}.`,
                 status: "success",
                 duration: 3000,
                 isClosable: true,
