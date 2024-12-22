@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCC2y2RqUXHMC2PZC4bpy2oP_9zhoT21WU",
-  authDomain: "crowfunding-ecea0.firebaseapp.com",
-  projectId: "crowfunding-ecea0",
-  storageBucket: "crowfunding-ecea0.firebasestorage.app",
-  messagingSenderId: "916866888624",
-  appId: "1:916866888624:web:83be677c1126a2ac095c75",
-  databaseURL: "https://crowfunding-ecea0-default-rtdb.asia-southeast1.firebasedatabase.app",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
 };
 
 const app = initializeApp(firebaseConfig);
@@ -17,6 +17,3 @@ const auth = getAuth(app);
 const db = getDatabase(app);
 
 export { auth, db };
-
-
-
