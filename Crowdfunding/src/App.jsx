@@ -10,7 +10,8 @@ import Contact from './Components/contact'
 import Login from './Components/login'
 import SignIn from './Components/signin'
 import DummyHome from './Components/DummyHome'
-import RaiseContainer from './Components/raiseContainer'
+import RaiseContainer1 from './Components/raiseContainer1'
+import TermsAndConditions from './Components/termCondition'
 
 function App() {
 
@@ -27,7 +28,8 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
-        <Route path='/donate' element={<RaiseContainer/>}/>
+        <Route path='/donate' element={<RaiseContainer1/>}/>
+        <Route path='/term&condition' element={<TermsAndConditions/>}/>
         
       </Routes>
     </Router>

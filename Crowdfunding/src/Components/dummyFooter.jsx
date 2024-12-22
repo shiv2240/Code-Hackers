@@ -1,9 +1,8 @@
 import "../styles/footer.css";
 import imglogo from "../images/old-Logo/COPY_a_a_b_h_a_r__2_-removebg-preview.png";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-const Footer = () => {
+const DummyFooter = () => {
   const navigate = useNavigate();
   return (
     <footer className="footerContainer">
@@ -18,21 +17,19 @@ const Footer = () => {
           <h4 className="heading">Quick Links</h4>
           <ul className="list">
             <li className="listItem">
-              <a onClick={()=> navigate("/about")} className="link">
+              <a className="link">
                 About Us
               </a>
             </li>
             <li className="listItem">
-              <a onClick={()=> navigate("/raise")} className="link">
+              <a className="link">
                 Raise
               </a>
             </li>
             <li className="listItem">
-              <Link to="/contact">
                 <a className="link">
                   Contact
                 </a>
-              </Link>
               
             </li>
           </ul>
@@ -83,4 +80,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default DummyFooter;

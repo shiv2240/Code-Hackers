@@ -1,4 +1,5 @@
 import { Button } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./navbar";
 import "../styles/home.css";
 import { useState } from "react";
@@ -11,6 +12,7 @@ import Footer from "./footer";
 import VolunteerPage from "./volunteer";
 import News from "./news";
 import ReactModal from "react-modal"
+
 ReactModal.setAppElement('#root');
 const Home = () => {
   const [isVideo, setIsVideo] = useState(false);
@@ -22,6 +24,7 @@ const Home = () => {
     const closeModal = () => {
       setIsVideo(false);
     };
+    const navigate = useNavigate()
   return (
     <>
       <div>
@@ -34,7 +37,7 @@ const Home = () => {
               With so much to consume and such little time, coming up <br />
               with relevant title ideas is essential
             </p>
-            <Button>Learn More</Button>
+            <Button onClick={()=> navigate("/about")}>Learn More</Button>
           </div>
         </div>
         <div className="content-1">
@@ -113,7 +116,7 @@ const Home = () => {
               matter. Watch, share, and continue to be the reason behind the
               smiles and successes we achieve together.
             </p>
-            <Button p="23px">Donate Now</Button>
+            <Button p="23px" onClick={()=> navigate("/donate")}>Donate Now</Button>
           </div>
         </div>
         <div className="content-3">

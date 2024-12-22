@@ -15,10 +15,11 @@ import content1img3 from "../images/content1img3.webp";
 import content1 from "../images/content2.webp";
 import content3 from "../images/content3.webp";
 import ReactModal from "react-modal"
+import DummyFooter from "./dummyFooter";
 ReactModal.setAppElement('#root');
 
 const MemoizedDummyNavbar = React.memo(DummyNavbar);
-const MemoizedFooter = React.memo(Footer);
+const MemoizedFooter = React.memo(DummyFooter);
 const MemoizedNews = React.memo(News);
 
 const DummyHome = () => {
@@ -52,7 +53,7 @@ const DummyHome = () => {
               With so much to consume and such little time, coming up <br />
               with relevant title ideas is essential
             </p>
-            <Button>Learn More</Button>
+            <Button onClick={openModal} >Learn More</Button>
           </div>
         </div>
 

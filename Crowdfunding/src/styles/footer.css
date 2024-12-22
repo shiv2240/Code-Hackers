@@ -52,6 +52,7 @@
   .link {
     color: rgb(60, 199, 142);
     text-decoration: none;
+    cursor: pointer;
   }
   
   .socialSection {

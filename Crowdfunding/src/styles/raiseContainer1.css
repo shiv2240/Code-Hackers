@@ -1,3 +1,5 @@
+/* Filename: raiseContainer.css */
+
 .container-raise {
     background-image: url(../images//blogs/blogsBackground.jpg);
     background-size: cover; 
@@ -14,6 +16,7 @@
 .raise-h2 {
     text-align: center; 
     color: white;
+    margin-top: 100px;
     margin-bottom: 20px; 
     font-family: 'Arial', sans-serif;
     font-size: 2em; 
