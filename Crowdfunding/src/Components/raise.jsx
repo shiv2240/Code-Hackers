@@ -4,6 +4,7 @@ import { db } from "../config/firebase.js";
 import "../styles/raise.css";
 import Navbar_Page from "../Components/navbar_page.jsx";
 import Footer from "../Components/footer";
+import RaiseContainer from "./raiseContainer.jsx";
 
 const Raise = () => {
   const [showForm, setShowForm] = useState(false);
@@ -162,6 +163,7 @@ const Raise = () => {
           </div>
         )}
       </div>
+      <RaiseContainer/>
       <Footer />
     </>
   );

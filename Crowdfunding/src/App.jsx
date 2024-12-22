@@ -10,6 +10,7 @@ import Contact from './Components/contact'
 import Login from './Components/login'
 import SignIn from './Components/signin'
 import DummyHome from './Components/DummyHome'
+import RaiseContainer from './Components/raiseContainer'
 
 function App() {
 
@@ -26,6 +27,8 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
+        <Route path='/donate' element={<RaiseContainer/>}/>
+        
       </Routes>
     </Router>
    </AuthProvider> 
