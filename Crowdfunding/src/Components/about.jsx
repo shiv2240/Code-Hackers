@@ -3,6 +3,7 @@ import '../styles/about.css';
 import Footer from "../Components/footer"
 import Volunteer from "../Components/volunteer"
 import { useNavigate } from "react-router-dom";
+import Comment from "../Components/comment";
 
 const About = () => {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ const About = () => {
           </div>
         </section>
       </main>
+      <Comment/>
       <Volunteer/>
         <Footer/>
     </>
