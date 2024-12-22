@@ -71,9 +71,11 @@ npm run dev or npm start
 ## Usage
 Create a Campaign:
 
-Navigate to the "Start a Campaign" page.
+Navigate to the "Raise" page.
 Fill in the form with campaign details, upload media, and set goals.
 Submit to publish the campaign.
+
+
 Donate to a Campaign:
 
 Select a campaign from the homepage.
@@ -83,6 +85,8 @@ Track Campaign Progress:
 
 View real-time progress bars on the campaign page.
 Check milestones and donation statistics.
+
+https://drive.google.com/drive/folders/1whghlATfohq4vxEQtYGvmmKRTKAAC7ug?usp=sharing
 
 ## Credentials
 Provide user credentials for autheticated pages
@@ -103,9 +107,11 @@ Frontend:
 React.js
 CSS Modules
 Chakra UI
+Font Awesome
 
 Backend:
 Firebase Realtime Database
+Firebase Authentication
 
 Others:
 Firebase Hosting for deployment
