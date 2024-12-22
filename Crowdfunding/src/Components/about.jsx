@@ -2,6 +2,7 @@ import Navbar_page from "../Components/navbar_page"
 import '../styles/about.css';    
 import Footer from "../Components/footer"
 import Volunteer from "../Components/volunteer"
+import Comment from "../Components/comment"
 
 const About = () => {
   return (
@@ -38,6 +39,7 @@ const About = () => {
           </div>
         </section>
       </main>
+      <Comment/>
       <Volunteer/>
         <Footer/>
     </>
