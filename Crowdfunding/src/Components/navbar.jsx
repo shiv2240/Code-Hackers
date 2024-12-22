@@ -32,7 +32,8 @@ const Navbar = () => {
           <Link to="/blog">Blog</Link>
           <Link to="/raise">Raise</Link>
           <Link to="/contact">Contact</Link>
-          <button className="make-a-donate">Make a Donate</button>
+          <Link to="/donate"><button className="make-a-donate">Make a Donate</button></Link>
+          
         </div>
 
         <div className="menu-icon" onClick={toggleMenu}>

@@ -2,8 +2,10 @@ import Navbar_page from "../Components/navbar_page"
 import '../styles/about.css';    
 import Footer from "../Components/footer"
 import Volunteer from "../Components/volunteer"
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar_page/>
@@ -34,7 +36,7 @@ const About = () => {
           <div className="cta-content">
             <h2>Start Your Campaign Today!</h2>
             <p>Join thousands of successful campaigns on our platform. It’s easy to get started!</p>
-            <button className="cta-button">Start Fundraising</button>
+            <button className="cta-button" onClick={()=> navigate('/donate')}>Start Fundraising</button>
           </div>
         </section>
       </main>
