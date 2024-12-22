@@ -11,6 +11,7 @@ FullStack
 https://aabhar.netlify.app/
 
 ## Directory Structure
+```plaintext
 my-app/
 📦src/
  ┣ 📂assets/
