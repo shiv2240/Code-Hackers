@@ -47,10 +47,11 @@
 /* Comments container */
 .comment-section-comments {
   margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(60, 199, 143, 0.8);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border:1px solid rgba(128, 128, 128, 0.3);
   display: flex;
   flex-wrap: wrap;
   gap: 15px; 
@@ -99,6 +100,7 @@
   margin-top: 10px;
   font-size: 14px;
   background-color: rgba(245, 245, 245, 0.8);
+  border:1px solid rgba(128, 128, 128, 0.3);
   border-radius: 5px;
 }
 

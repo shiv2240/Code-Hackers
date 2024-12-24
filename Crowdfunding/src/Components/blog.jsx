@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../Components/navbar_page";
 import "../styles/blogs.css";
 import blogImg1 from "../images/blogs/blog-1.jpg";
@@ -12,7 +13,7 @@ const articles = [
     id: 1,
     title: "Understanding Poverty: A Global Perspective",
     excerpt:
-      "This article explores the various dimensions of poverty around the world Based on 2019's PPPs International Comparison Program, According to the United Nations Millennium Development Goals (MDG) programme, 80 million people out of 1.2 billion Indians, roughly equal to 6.7% of India's population, lived below the poverty line of $1.25 and 84% of Indians lived on less than $6.85 per day in ...",
+      "This article explores the various dimensions of poverty around the world Based on 2019's PPPs International Comparison Program...",
     image: blogImg5,
     link: "https://www.hrw.org/report/2022/11/17/if-i-wasnt-poor-i-wouldnt-be-unfit/family-separation-crisis-us-child-welfare",
   },
@@ -91,13 +92,24 @@ const articles = [
 ];
 
 const Blog = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 2;
+
+  const startIndex = (currentPage - 1) * articlesPerPage;
+  const endIndex = startIndex + articlesPerPage;
+  const totalPages = Math.ceil(articles.length / articlesPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <>
       <div className="blog-section">
         <Navbar />
         <div className="blog">
           <div className="articles">
-            {articles.map((article) => (
+            {articles.slice(startIndex, endIndex).map((article) => (
               <div key={article.id} className="article">
                 <img
                   src={article.image}
@@ -116,10 +128,22 @@ const Blog = () => {
               </div>
             ))}
           </div>
+          <div className="pagination">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => handlePageChange(i + 1)}
+                className={currentPage === i + 1 ? "active" : ""}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />
     </>
   );
 };
+
 export default Blog;

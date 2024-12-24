@@ -20,7 +20,9 @@ function Login() {
     setError('');
     
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+     await signInWithEmailAndPassword(auth, email, password);
+
+
       toast({
         title: 'Successful',
         description: "Here is your dashboard",

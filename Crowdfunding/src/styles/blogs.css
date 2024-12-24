@@ -111,3 +111,26 @@
     margin-top: 8rem;
   }
 }
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+.pagination button.active {
+  background-color:rgba(60, 199, 143, 1);
+  color: #fff;
+  border-color: rgba(60, 199, 143, 1);
+}

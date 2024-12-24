@@ -8,8 +8,8 @@ const CommentSection = () => {
   const [inputValue, setInputValue] = useState('');
   const [replyingTo, setReplyingTo] = useState(null);
   const [editingComment, setEditingComment] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1); // Track current page
-  const commentsPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1); 
+  const commentsPerPage = 4;
 
   // Fetch comments from Firebase
   useEffect(() => {
